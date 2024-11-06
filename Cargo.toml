@@ -1,0 +1,17 @@
+[package]
+name = "formula-solver"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+console_error_panic_hook = { version = "0.1.7", optional = true }
+wasm-bindgen = "0.2.95"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.45"
+
+[profile.release]
+opt-level = "s"
