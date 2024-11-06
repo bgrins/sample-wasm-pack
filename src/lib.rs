@@ -7,7 +7,12 @@ extern "C" {
     fn alert(s: &str);
 }
 
+// #[wasm_bindgen]
+// pub fn greet() {
+//     alert("Hello, {{project-name}}!");
+// }
+
 #[wasm_bindgen]
-pub fn greet() {
-    alert("Hello, {{project-name}}!");
+pub fn greet(name: &str) -> String {
+    format!("Hello from Rust, {}!", name)
 }
